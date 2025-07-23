@@ -1,3 +1,22 @@
-<h1>
-Hello World   
-<h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h2>Enter House Features</h2>
+    <form action="http://127.0.0.1:5000/predict" method="post">
+        <label>MedInc: <input type="number" step="any" name="MedInc" required></label><br><br>
+        <label>HouseAge: <input type="number" step="any" name="HouseAge" required></label><br><br>
+        <label>AveRooms: <input type="number" step="any" name="AveRooms" required></label><br><br>
+        <label>AveBedrms: <input type="number" step="any" name="AveBedrms" required></label><br><br>
+        <label>Population: <input type="number" step="any" name="Population" required></label><br><br>
+        <label>AveOccup: <input type="number" step="any" name="AveOccup" required></label><br><br>
+        <label>Latitude: <input type="number" step="any" name="Latitude" required></label><br><br>
+        <label>Longitude: <input type="number" step="any" name="Longitude" required></label><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
